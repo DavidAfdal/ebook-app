@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:flutter_application_1/screens/home/Components/recent_book.dart';
 import 'package:flutter_application_1/themes.dart';
 
 class HomePage extends StatelessWidget {
@@ -60,6 +61,21 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget recentBook() {
+    return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.symmetric(horizontal: 30),
+        child: Row(
+          children: [
+            RecentBook(image: 'assets/images/buku1.png', title: 'The Magic'),
+            RecentBook(image: 'assets/images/buku2.png', title: 'Guy Kawasaki'),
+            RecentBook(image: 'assets/images/buku3.png', title: 'The Lore'),
+            RecentBook(
+                image: 'assets/images/buku4.png', title: 'Who Moved My Cheese'),
+          ],
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,11 +88,20 @@ class HomePage extends StatelessWidget {
                   color: whiteColor,
                   borderRadius:
                       BorderRadius.only(bottomLeft: Radius.circular(30))),
-              child: Column(children: [
-                header(),
-                SizedBox(height: 30),
-                searchField(),
-              ]),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    header(),
+                    SizedBox(height: 30),
+                    searchField(),
+                    SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: Text('Recent Book'),
+                    ),
+                    SizedBox(height: 20),
+                    recentBook()
+                  ]),
             ),
           ],
         ));
