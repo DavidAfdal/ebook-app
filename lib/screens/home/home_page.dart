@@ -23,7 +23,16 @@ class HomePage extends StatelessWidget {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('Hello Sarah'), Text('Good Morning')],
+              children: [
+                Text(
+                  'Hello Sarah',
+                  style: semiBoldText16,
+                ),
+                Text(
+                  'Good Morning',
+                  style: regularText14.copyWith(color: grayColor),
+                )
+              ],
             ),
             Spacer(),
             Image.asset('assets/icons/menu.png', width: 18)
@@ -39,6 +48,7 @@ class HomePage extends StatelessWidget {
         controller: _searching,
         decoration: InputDecoration(
             hintText: 'Find Your Favorite Book',
+            hintStyle: mediumText12.copyWith(color: grayColor),
             fillColor: grayColoSerchfield,
             filled: true,
             border: OutlineInputBorder(
@@ -97,7 +107,10 @@ class HomePage extends StatelessWidget {
                     SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30),
-                      child: Text('Recent Book'),
+                      child: Text(
+                        'Recent Book',
+                        style: semiBoldText16,
+                      ),
                     ),
                     SizedBox(height: 20),
                     recentBook()

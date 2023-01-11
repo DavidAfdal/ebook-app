@@ -19,7 +19,7 @@ class RecentBook extends StatelessWidget {
             height: 150,
             padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
-                border: Border.all(color: primaryColor),
+                border: Border.all(color: border),
                 borderRadius: BorderRadius.all(Radius.circular(12))),
             child: Row(
               children: [
@@ -29,7 +29,7 @@ class RecentBook extends StatelessWidget {
                 ),
                 SizedBox(width: 30),
                 Column(
-                  children: [Text(title)],
+                  children: [Text(title, style: semiBoldText14)],
                 )
               ],
             )),
