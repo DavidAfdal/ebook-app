@@ -77,11 +77,22 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 30),
         child: Row(
           children: [
-            RecentBook(image: 'assets/images/buku1.png', title: 'The Magic'),
-            RecentBook(image: 'assets/images/buku2.png', title: 'Guy Kawasaki'),
-            RecentBook(image: 'assets/images/buku3.png', title: 'The Lore'),
             RecentBook(
-                image: 'assets/images/buku4.png', title: 'Who Moved My Cheese'),
+                image: 'assets/images/buku1.png',
+                title: 'The Magic',
+                percent: 70),
+            RecentBook(
+                image: 'assets/images/buku2.png',
+                title: 'Guy Kawasaki',
+                percent: 60),
+            RecentBook(
+                image: 'assets/images/buku3.png',
+                title: 'The Lore',
+                percent: 50),
+            RecentBook(
+                image: 'assets/images/buku4.png',
+                title: 'Who Moved My Cheese',
+                percent: 80),
           ],
         ));
   }
